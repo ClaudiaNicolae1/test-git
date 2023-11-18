@@ -1,6 +1,5 @@
 package Session13;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -37,7 +36,10 @@ public class Main {
         System.out.println();
         Bird bird = new Penguin();
         System.out.println(bird);
-        //nu e terminata
+        System.out.println();
+        Worker1 worker = new Worker1();
+        worker.work();
+        worker.eats();
     }
 
     static class Box<T> {
@@ -120,4 +122,8 @@ public class Main {
         }
     }
     static class Penguin extends NonFlyableBird{ }
+
+
+
+
 }
