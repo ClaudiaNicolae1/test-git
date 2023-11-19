@@ -16,8 +16,8 @@ public class Main {
         Rectangle rectangle = new Rectangle("red", true, 4.6f, 6.8f);
         System.out.println("Area of the circle: " + circle.getArea());
         System.out.println("Perimeter of the circle: " + circle.getPerimeter());
-        System.out.println("Area of the rectangle: " + rectangle.getArea());
-        System.out.println("Perimeter of the rectangle: " + rectangle.getPerimeter());
+        System.out.println("Area of the Rectangle: " + rectangle.getArea());
+        System.out.println("Perimeter of the Rectangle: " + rectangle.getPerimeter());
 
     }
 }
