@@ -44,6 +44,11 @@ public class Main {
         String date4 = scanner.nextLine();
         long days = daysBetween(date3, date4);
         System.out.println( "Days between: " + days);
+
+        String priorTime = "12:30:45";
+        String elapsedTime = elapsedTimeSince(priorTime);
+        System.out.println(elapsedTime);
+        //ultimul exercitiu este de pe chatgpt
     }
 
     public static void displayCurrentTime(){
@@ -88,9 +93,24 @@ public class Main {
         LocalDate localDate1 = LocalDate.parse(date1);
         return Math.abs(localDate.until(localDate1).getDays()); //am luat de pe net
     }
-    public static void elapsedTimeSince(String date){
-        LocalDateTime time = LocalDateTime.now();
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-        //nu stiu sa-l fac:(
+    public static String elapsedTimeSince(String priorTime){
+        Date currentTime = new Date();
+
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        Date startTime;
+        try {
+            startTime = sdf.parse(priorTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return "Invalid time format";
+        }
+
+        long elapsedTimeMillis = currentTime.getTime() - startTime.getTime();
+        long hours = elapsedTimeMillis / (60 * 60 * 1000);
+        long minutes = (elapsedTimeMillis % (60 * 60 * 1000)) / (60 * 1000);
+        long seconds = (elapsedTimeMillis % (60 * 1000)) / 1000;
+        String result = hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
+
+        return result;
     }
 }
