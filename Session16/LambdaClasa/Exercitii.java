@@ -1,4 +1,4 @@
-package Session15.LambdaClasa;
+package Session16.LambdaClasa;
 public class Exercitii {
     public void main(String[] args) {
         Book lambdaBook = new Book("Author 1", "name1", 18) {

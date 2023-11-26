@@ -1,4 +1,4 @@
-package Session15.LambdaClasa;
+package Session16.LambdaClasa;
 
 public class FunctionalInterfaces {
     public static void main(String[] args) {

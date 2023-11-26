@@ -1,4 +1,4 @@
-package Session15.LambdaClasa;
+package Session16.LambdaClasa;
 import java.util.Random;
 import java.util.function.*;
 
